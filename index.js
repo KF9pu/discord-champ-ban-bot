@@ -36,7 +36,7 @@ client.on(Events.MessageCreate, msg => {
       // 챔피언 이름 이상
       console.log("🚀 ~ isExistChampsIdx:", banList[isExistChampsIdx]);
       msg.reply(
-        `${banList[isExistChampsIdx]}라는 챔피은... /올챔 으로 이름을 확인해주세오 💚`
+        `${banList[isExistChampsIdx]}라는 챔피은...없는 것 같아요 /올챔 으로 이름을 확인해주세오 💚`
       );
     } else {
       // 통과 밴된 챔피언 빼고 30캐릭터 추출하고 절반으로 나눈다.
