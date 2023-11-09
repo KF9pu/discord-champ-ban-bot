@@ -1,15 +1,3 @@
-export function getChampionList() {
-  return allChamps
-    .map(champion => champion.name)
-    .sort((a, b) => a.localeCompare(b, "ko", { sensitivity: "base" }));
-}
-
-export function ExistChamps(champName) {
-  const allCHampNames = getChampionList();
-
-  return allCHampNames.includes(champName);
-}
-
 export const allChamps = [
   {
     id: "Aatrox",
