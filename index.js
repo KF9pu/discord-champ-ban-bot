@@ -8,8 +8,9 @@ const client = new Client({
 });
 import "dotenv/config";
 import isMaches from "./libs/isMaches.js";
-import { banPattern } from "./commands.js";
+import { banPattern, teamDivisionPattern } from "./commands.js";
 import getBanList from "./libs/getBanList.js";
+import getDivideTeam from "./libs/getDivideTeam.js";
 
 client.once("ready", () => console.log(client.user.tag + "준비완료"));
 
@@ -23,9 +24,8 @@ client.on(Events.MessageCreate, msg => {
   // 입력반은 챔피언 이외에 챔피언을 나누어서 뿌려줌
   if (isMaches(msg, banPattern)) getBanList(msg);
 
-  if (msg.content === "!") {
-    console.log("");
-  }
+  // 팀원 나누기
+  if (isMaches(msg, teamDivisionPattern)) getDivideTeam(msg);
 
   if (msg.content === "!오늘뭐먹지") {
     console.log("");
