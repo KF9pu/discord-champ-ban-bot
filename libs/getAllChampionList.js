@@ -1,3 +1,5 @@
+import { allChamps } from "./champs.js";
+
 export default function getAllChampionList() {
   return allChamps
     .map(champion => champion.name)
