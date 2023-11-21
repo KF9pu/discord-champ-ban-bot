@@ -1,10 +1,6 @@
 import { Client, GatewayIntentBits, Events } from "discord.js";
 const client = new Client({
-  intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.MessageContent,
-  ],
+  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
 });
 import "dotenv/config";
 import isMaches from "./libs/isMaches.js";
